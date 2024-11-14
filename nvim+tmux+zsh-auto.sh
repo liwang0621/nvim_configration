@@ -28,15 +28,15 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get update
 sudo apt-get install -y software-properties-common
 sudo apt-get install -y neovim
-sudo apt-get install -y python-neovim
+# sudo apt-get install -y python-neovim
 sudo apt-get install -y python3-neovim
 sudo apt-get install -y zsh
 sudo apt-get install -y tmux
-sudo apt-get install -y ctags
+sudo apt-get install -y universal-ctags
 sudo apt-get install -y build-essential cmake python3-dev
 sudo apt-get install -y git
 sudo apt-get install -y python3-pip
-sudo apt-get install -y python-pip
+# sudo apt-get install -y python-pip
 sudo apt-get install -y nodejs
 sudo apt-get install -y yarn
 sudo apt-get install -y tar
@@ -52,8 +52,9 @@ echo y|sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/
 
 echo "${GREEN} oh my zsh installation is completed${RESET}"
 echo "${BLUE}make zsh default${RESET}" 
-sudo usermod -s /bin/zsh root
-sudo usermod -s /bin/zsh $USER
+
+# sudo usermod -s /bin/zsh root
+# sudo usermod -s /bin/zsh $USER
 
 echo "${GREEN}  zsh  is set as default${RESET}"
 echo "${BLUE}install vim-plug"
@@ -95,6 +96,7 @@ echo n|sudo ~/.fzf/install
 echo "${GREEN} fzf installation is completed${RESET}"
 echo "${BLUE}install zsh autosuggestions"
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sudo git clone https://github.com/conda-incubator/conda-zsh-completion.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
 echo "${GREEN} zsh autosuggestions installation is completed${RESET}"
 echo "${BLUE}install zsh-syntax-highlighting"
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
